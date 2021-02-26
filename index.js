@@ -6,16 +6,16 @@ function clockTick() {
   const min = now.getMinutes();
   const second = now.getSeconds();
 
-  const clockHour = document.querySelector(".hour")
+  const clockHour = document.querySelector(".hour");
   const clockMin = document.querySelector(".min")
   const clockSecond = document.querySelector(".second")
 
-  const degH = hour * (360/12) + min * (360/12/60) + 90;
-  const degM = min * (360/60) + 90;
-  const degS = second * (360/60) +90 ;
+  const degH = hour * (360 / 12) + min * (360 / 12 / 60) + 90;
+  const degM = min * (360 / 60) + 90;
+  const degS = second * (360 / 60) + 90;
 
   clockHour.style.transform = `rotate(${degH}deg)`;
-  clockMin.style.transform = `rotate(${degM}deg)`; 
-  clockSecond.style.transform = `rotate(${degS}deg)`; 
+  clockMin.style.transform = `rotate(${degM}deg)`;
+  clockSecond.style.transform = `rotate(${degS}deg)`;
 }
 clockTick();
